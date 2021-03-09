@@ -1,9 +1,12 @@
-function Login()
+async function Login()
 {
+    const PiNetworkClient = window.PiNetwork;
+    window.alert("Yo");
     try {
+        window.alert("Authenticating...");
         const user = await PiNetworkClient.Authenticate()
-        console.log(`Hello ${user.username}`)
+        window.alert(`Hello ${user.username}`)
     } catch (err) {
-        console.log(err)
+        window.alert(err)
     }
 }
